@@ -6,15 +6,26 @@ import Test4 from './components/Test4'
 import Test5 from './components/Test5'
 import Test6 from './components/Test6'
 import Registration from './components/Registration'
+import Navbar from './Navbar'
+import { Routes,Route } from 'react-router-dom'
+import Home from './components/Home'
+import Service from './components/Service'
+import Calendar from './components/Calendar'
+import Projects from './components/Projects'
+
 
 
 const App = () => {
 
   return (
     <div>
-     <h1 className="text-3xl font-bold text-green-600 bg-pink-700">
-      Hello world!
-    </h1>
+      <Navbar/>
+      <Routes>
+       <Route path="/home" element={<Home/>}/>
+       <Route path="/service" element={<Service/>}/>
+       <Route path='/calender' element={<Calendar/>}/>
+       <Route path='/sujitha' element={<Projects/>}/>
+      </Routes> 
     </div>
   )
 }
